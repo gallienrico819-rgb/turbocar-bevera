@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turbo Car di Conti Antonio | 50 Anni di Passione e Rimappatura ECU a Bevera (Lecco)</title>
+    <title>Turbo Car di Conti Antonio | Elettronica, FAP, EGR e Motori a Bevera (Lecco)</title>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,8 +26,8 @@
         }
 
         body {
-            background-color: var--bg-base;
-            color: var--text-main);
+            background-color: var(--bg-base);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -86,7 +86,7 @@
         }
 
         .hero {
-            padding: 12rem 5% 8rem 5%;
+            padding: 12rem 5% 6rem 5%;
             background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
                         radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
             display: flex;
@@ -116,7 +116,7 @@
         }
 
         @media(max-width: 900px) {
-            .hero h1 { font-size: 2.6rem; }
+            .hero h1 { font-size: 2.5rem; }
         }
 
         .hero h1 span {
@@ -130,10 +130,65 @@
             margin-bottom: 2.5rem;
         }
 
+        /* Hero Spotlight Feature Box */
+        .hero-spotlight {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, var(--bg-card) 100%);
+            border: 1px solid var(--accent-cyan);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+        }
+
+        @media(max-width: 900px) {
+            .hero-spotlight { grid-template-columns: 1fr; padding: 1.5rem; }
+        }
+
+        .hero-spotlight h3 {
+            color: var(--accent-cyan);
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-spotlight p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .spotlight-tags {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .tag-item {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tag-item span {
+            color: var(--accent-amber);
+        }
+
         .btn-group {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
@@ -326,7 +381,7 @@
         .form-control {
             width: 100%;
             background: var(--bg-base);
-            border: 1px solid var--border-color);
+            border: 1px solid var(--border-color);
             padding: 0.9rem 1rem;
             color: var(--text-main);
             border-radius: 4px;
@@ -335,11 +390,11 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var--accent-cyan);
+            border-color: var(--accent-cyan);
         }
 
         footer {
-            border-top: 1px solid var--border-color);
+            border-top: 1px solid var(--border-color);
             padding: 3rem 5%;
             text-align: center;
             color: var(--text-muted);
@@ -359,9 +414,23 @@
     </header>
 
     <section class="hero">
-        <div class="badge">Bevera di Lecco — Meccanica e Potenza in Brianza</div>
-        <h1>50 Anni di Storia, Passione e <span>Elaborazioni</span></h1>
-        <p>Dopo cinquant'anni trascorsi a mettere le mani su ogni genere di motore, Conti Antonio ha scelto di concentrarsi su ciò che ama di più: la cura artigianale delle auto di tutti i giorni, delle utilitarie e delle berline (dalle Fiat alle tedesche come BMW, Audi e Porsche), unendo un'esperienza ineguagliabile all'arte della rimappatura ECU e dell'incremento di potenza.</p>
+        <div class="badge">Bevera di Lecco — Elettronica e Meccanica in Brianza</div>
+        <h1>50 Anni di Passione e Maestria nei Motori a <span>Bevera</span></h1>
+        <p>Dopo cinquant'anni trascorsi a smontare, studiare e rigenerare ogni tipo di motore, Conti Antonio mette la sua straordinaria esperienza al servizio delle auto tradizionali, berline e utilitarie (dalle Fiat alle tedesche come BMW, Audi e Porsche).</p>
+        
+        <!-- Big Spotlight Box Requested -->
+        <div class="hero-spotlight">
+            <div>
+                <h3>Specializzazione Principale & Elettronica</h3>
+                <p>Maestro indiscusso nell'<strong>elaborazione di centraline elettroniche</strong> e nella gestione tecnica avanzata di sistemi complessi. Interventi professionali e risolutivi su <strong>FAP (Filtro Antiparticolato), DPF e valvole EGR</strong> per ripristinare piena efficienza, affidabilità e brio alla tua auto.</p>
+            </div>
+            <div class="spotlight-tags">
+                <div class="tag-item"><span>⚡</span> Rimappatura Centraline</div>
+                <div class="tag-item"><span>⚙️</span> Gestione FAP / DPF</div>
+                <div class="tag-item"><span>🔧</span> Esclusione Valvole EGR</div>
+            </div>
+        </div>
+
         <div class="btn-group">
             <a href="#contatti" class="btn btn-primary">Contatta l'Officina</a>
             <a href="#servizi" class="btn btn-secondary">Scopri i Servizi</a>
@@ -371,21 +440,21 @@
     <section id="storia">
         <div class="legacy-box">
             <div class="legacy-content">
-                <h3>Mezzo Secolo di Straordinaria Esperienza a Bevera</h3>
-                <p>La storia di Turbo Car a Bevera è la storia di una vita passata in officina. Antonio ha visto evolversi l'automobile moderna fin dalle sue basi. Ha aperto, smontato e capito qualsiasi tipo di motore e sistema meccanico.</p>
-                <p>Oggi questa immensa bagaglio di competenze è a disposizione di chi guida tutti i giorni: dalla manutenzione impeccabile delle auto tradizionali fino alle ottimizzazioni elettroniche mirate per liberare cavalli, migliorare l'erogazione e ottimizzare i consumi.</p>
+                <h3>Mezzo Secolo di Vera Competenza Meccanica</h3>
+                <p>La storia di Turbo Car a Bevera è fatta di vera esperienza sul campo. Antonio conosce l'evoluzione dell'automobile moderna fin dalle sue radici: sa esattamente come prendere un motore in mano, smontarlo pezzo per pezzo, analizzarlo e rimetterlo a punto alla perfezione.</p>
+                <p>Oggi unisce questa straordinaria manualità artigianale alle più avanzate competenze di elettronica e rimappatura, offrendo ai suoi clienti diagnosi precise e soluzioni definitive che le officine comuni non sanno affrontare.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <h4>50+</h4>
-                    <span>Anni di Esperienza</span>
+                    <span>Anni di Attività</span>
                 </div>
                 <div class="stat-item">
                     <h4>100%</h4>
-                    <span>Passione Autentica</span>
+                    <span>Esperienza Diretta</span>
                 </div>
                 <div class="stat-item">
-                    <h4>Auto & ECU</h4>
+                    <h4>Ecu & FAP</h4>
                     <span>Specializzazione</span>
                 </div>
                 <div class="stat-item">
@@ -399,24 +468,24 @@
     <section id="servizi">
         <div class="section-header">
             <h2>I Nostri <span>Servizi</span></h2>
-            <p>Competenza tecnica pura dedicata alle automobili tradizionali e alle prestazioni su misura.</p>
+            <p>Elettronica avanzata, gestione FAP/EGR e manutenzione meccanica di precisione per la tua auto.</p>
         </div>
         <div class="grid-4">
             <div class="card">
-                <h3>Rimappatura ECU & Potenza</h3>
-                <p>Ottimizzazione elettronica personalizzata delle centraline per incrementare la potenza (cavalli e coppia), migliorare la risposta dell'acceleratore e ottimizzare l'efficienza su BMW, Audi, Porsche, Fiat e molti altri marchi.</p>
+                <h3>Elaborazione Centraline & ECU</h3>
+                <p>Rimappatura e programmazione personalizzata per ottimizzare l'erogazione, aumentare la coppia e incrementare i cavalli su BMW, Audi, Porsche, Fiat e altri marchi.</p>
             </div>
             <div class="card">
-                <h3>Manutenzione Auto Tradizionali</h3>
-                <p>Tagliandi completi, cambi olio di alta qualità, controlli periodici e manutenzione generale curata personalmente da Antonio per mantenere la tua vettura sempre affidabile nel tempo.</p>
+                <h3>Gestione FAP, DPF & EGR</h3>
+                <p>Specializzazione tecnica nella risoluzione di problemi legati al filtro antiparticolato (FAP/DPF) e alle valvole EGR, per eliminare spie e blocchi motore in modo definitivo.</p>
             </div>
             <div class="card">
-                <h3>Riparazioni & Meccanica Generale</h3>
-                <p>Interventi di meccanica approfondita su freni, sospensioni, frizioni e distribuzione, eseguiti con la precisione e l'affidabilità di chi conosce ogni singolo bullone dell'auto.</p>
+                <h3>Smontaggio & Revisione Motori</h3>
+                <p>Interventi meccanici profondi, revisione completa componenti, testate e messa a punto con la manualità e la precisione di chi ha 50 anni di officina alle spalle.</p>
             </div>
             <div class="card">
-                <h3>Diagnostica Elettronica</h3>
-                <p>Analisi computerizzata avanzata per individuare rapidamente guasti nascosti, spie motore anomale e malfunzionamenti dell'impianto elettrico e di iniezione.</p>
+                <h3>Tagliandi & Manutenzione</h3>
+                <p>Manutenzione ordinaria accurata, cambi olio di qualità e controlli periodici per mantenere l'auto di tutti i giorni sempre sicura e affidabile nel tempo.</p>
             </div>
         </div>
     </section>
@@ -424,12 +493,12 @@
     <section id="contatti">
         <div class="section-header">
             <h2>Vieni a Trovarci a <span>Bevera</span></h2>
-            <p>Parla direttamente con Antonio per qualsiasi esigenza di manutenzione o per incrementare le prestazioni della tua auto.</p>
+            <p>Parla direttamente con Antonio per qualsiasi problema elettronico, meccanico o di centralina.</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
                 <h3 class="brand-font" style="font-size: 1.8rem; margin-bottom: 1rem;">Turbo Car di Conti Antonio</h3>
-                <p>L'officina storica di riferimento a Bevera (Lecco) per chi cerca competenza sincera e risultati concreti.</p>
+                <p>L'officina di riferimento a Bevera (Lecco) per chi cerca competenza tecnica reale e soluzioni concrete.</p>
                 <ul>
                     <li>📍 <strong>Indirizzo:</strong> Bevera, Provincia di Lecco (Brianza), Italia</li>
                     <li>📞 <strong>Telefono Diretto:</strong> [Inserire Telefono di Antonio]</li>
@@ -443,10 +512,10 @@
                 </div>
                 <div class="form-group">
                     <label>Marca e Modello della tua Auto</label>
-                    <input type="text" class="form-control" placeholder="es. BMW Serie 3, Audi A4, Fiat Panda, Porsche" required>
+                    <input type="text" class="form-control" placeholder="es. BMW Serie 3, Audi A4, Fiat, Porsche" required>
                 </div>
                 <div class="form-group">
-                    <label>Richiesta (Tagliando, Rimappatura ECU, Controllo, ecc.)</label>
+                    <label>Richiesta (Centralina, FAP/EGR, Tagliando, Motore)</label>
                     <textarea class="form-control" rows="4" placeholder="Descrivi di cosa ha bisogno la tua auto..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Invia Richiesta ad Antonio</button>
