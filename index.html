@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo Car di Conti Antonio | 50 Years of Master Mechanics in Bevera (Lecco)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0c0e12;
+            --bg-card: #15181e;
+            --bg-card-hover: #1c212b;
+            --accent-cyan: #00f0ff;
+            --accent-amber: #f59e0b;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #262d3d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Chakra Petch', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(12, 14, 18, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .lang-toggle {
+            background: var(--border-color);
+            color: var(--text-main);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .lang-toggle:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-base);
+        }
+
+        .hero {
+            padding: 12rem 5% 8rem 5%;
+            background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size.clamp: 2.5rem;
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero h1 span {
+            color: var(--accent-cyan);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Chakra Petch', sans-serif;
+            letter-spacing: 0.05em;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: var(--bg-base);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #00c2cc;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        section {
+            padding: 6rem 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 span {
+            color: var(--accent-amber);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .legacy-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #10141b 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media(max-width: 900px) {
+            .legacy-box { grid-template-columns: 1fr; gap: 2rem; }
+            .hero h1 { font-size: 2.8rem; }
+        }
+
+        .legacy-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legacy-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.2rem;
+            color: var(--accent-cyan);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 4rem;
+        }
+
+        @media(max-width: 900px) {
+            .contact-container { grid-template-columns: 1fr; padding: 2rem; }
+        }
+
+        .contact-info ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .contact-info li {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info li strong {
+            color: var(--text-main);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            background: var(--bg-base);
+            border: 1px solid var(--border-color);
+            padding: 0.9rem 1rem;
+            color: var(--text-main);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Localization toggling control */
+        [data-lang-en] { display: block; }
+        [data-lang-it] { display: none; }
+        html[data-lang="it"] [data-lang-en] { display: none; }
+        html[data-lang="it"] [data-lang-it] { display: block; }
+        
+        /* Inline span toggles */
+        span[data-lang-en], span[data-lang-it] { display: inline; }
+        html[data-lang="it"] span[data-lang-en] { display: none; }
+        html[data-lang="it"] span[data-lang-it] { display: inline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">TURBO CAR <span>DI CONTI ANTONIO</span></a>
+        <nav>
+            <a href="#legacy" data-lang-en="Legacy" data-lang-it="La Nostra Storia">Legacy</a>
+            <a href="#services" data-lang-en="Services" data-lang-it="Servizi">Services</a>
+            <a href="#contact" data-lang-en="Contact" data-lang-it="Contatti">Contact</a>
+            <button class="lang-toggle" id="langSwitchBtn" onclick="toggleLanguage()">IT / EN</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="badge" data-lang-en="Bevera di Sirtori / Lecco — Province Master Mechanics" data-lang-it="Bevera (Lecco) — Maestria Meccanica Brianza">Bevera di Lecco — Province Master Mechanics</div>
+        <h1 data-lang-en="50 Years of Raw Engine Mastery in <span>Brianza</span>" data-lang-it="50 Anni di Maestria Meccanica Pura in <span>Brianza</span>">50 Years of Raw Engine Mastery in <span>Brianza</span></h1>
+        <p data-lang-en="From daily drivers and work vans to high-performance BMWs, Porsches, exotic Bentleys, and motorcycles. If it has an engine, Conti Antonio knows how to fix it, tune it, and unleash its full potential." data-lang-it="Dalle utilitarie ai furgoni da lavoro, dalle BMW e Porsche ad alte prestazioni alle esclusive Bentley e moto. Se ha un motore, Conti Antonio sa come ripararlo, metterlo a punto e spremerne tutta la potenza.">From daily drivers and work vans to high-performance BMWs, Porsches, exotic Bentleys, and motorcycles. If it has an engine, Conti Antonio knows how to fix it, tune it, and unleash its full potential.</p>
+        <div class="btn-group">
+            <a href="#contact" class="btn btn-primary" data-lang-en="Book Consultation" data-lang-it="Prenota Consulto">Book Consultation</a>
+            <a href="#services" class="btn btn-secondary" data-lang-en="Explore Expertise" data-lang-it="Scopri i Servizi">Explore Expertise</a>
+        </div>
+    </section>
+
+    <section id="legacy">
+        <div class="legacy-box">
+            <div class="legacy-content">
+                <h3 data-lang-en="The Legend of Bevera" data-lang-it="La Leggenda di Bevera">The Legend of Bevera</h3>
+                <p data-lang-en="For half a century, Turbo Car di Conti Antonio has been the definitive point of reference in the Lecco and Brianza territory. While modern garages rely on swapping complete assemblies, Antonio relies on five decades of hands-on mechanical genius, intuition, and precision diagnosis." data-lang-it="Da mezzo secolo, Turbo Car di Conti Antonio è il punto di riferimento definitivo nel territorio di Lecco e della Brianza. Mentre le officine moderne sostituiscono interi blocchi, Antonio si affida a cinquant'anni di ingegno meccanico manuale, intuito e diagnosi millimetriche.">For half a century, Turbo Car di Conti Antonio has been the definitive point of reference in the Lecco and Brianza territory. While modern garages rely on swapping complete assemblies, Antonio relies on five decades of hands-on mechanical genius, intuition, and precision diagnosis.</p>
+                <p data-lang-en="Whether a local courier van needs reliable turnaround, a customer brings in a precision German sports car, or a motorcycle requires expert tuning, Antonio handles every single task directly from start to finish." data-lang-it="Che un furgone da lavoro locale abbia bisogno di manutenzione urgente, che un cliente porti una sportiva tedesca di precisione o che una moto richieda una messa a punto esperta, Antonio gestisce ogni singolo intervento direttamente dall'inizio alla fine.">Whether a local courier van needs reliable turnaround, a customer brings in a precision German sports car, or a motorcycle requires expert tuning, Antonio handles every single task directly from start to finish.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>50+</h4>
+                    <span data-lang-en="Years Experience" data-lang-it="Anni di Esperienza">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <h4>100%</h4>
+                    <span data-lang-en="Direct Hands-On Work" data-lang-it="Lavoro Diretto">Direct Hands-On Work</span>
+                </div>
+                <div class="stat-item">
+                    <h4>All</h4>
+                    <span data-lang-en="Vehicle Platforms" data-lang-it="Tipi di Veicoli">Vehicle Platforms</span>
+                </div>
+                <div class="stat-item">
+                    <h4>Lecco</h4>
+                    <span data-lang-en="Brianza Region" data-lang-it="Territorio Brianza">Brianza Region</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-header">
+            <h2 data-lang-en="Complete Mechanical <span>Scope</span>" data-lang-it="Gamma Completa di <span>Interventi</span>">Complete Mechanical <span>Scope</span></h2>
+            <p data-lang-en="Unmatched versatility across all engine types, weights, and performance tiers." data-lang-it="Versatilità ineguagliabile su ogni tipo di motore, cilindrata e livello di prestazione.">Unmatched versatility across all engine types, weights, and performance tiers.</p>
+        </div>
+        <div class="grid-4">
+            <div class="card">
+                <h3 data-lang-en="Performance & ECU Mapping" data-lang-it="Mappatura Centraline & ECU">Performance & ECU Mapping</h3>
+                <p data-lang-en="Precision custom remapping for BMW, Porsche, Audi, and Mercedes-AMG platforms. Optimized fueling, ignition timing, and boost curves." data-lang-it="Rimappatura personalizzata di precisione per piattaforme BMW, Porsche, Audi e Mercedes-AMG. Ottimizzazione di iniezione, anticipi e pressione di sovralimentazione.">Precision custom remapping for BMW, Porsche, Audi, and Mercedes-AMG platforms. Optimized fueling, ignition timing, and boost curves.</p>
+            </div>
+            <div class="card">
+                <h3 data-lang-en="Cars, Vans & Exotics Care" data-lang-it="Auto, Furgoni e Marche Esclusive">Cars, Vans & Exotics Care</h3>
+                <p data-lang-en="Comprehensive routine maintenance, precise fluid changes, and mechanical overhauls for everyday passenger cars, work vans, and luxury exotics like Bentley." data-lang-it="Manutenzione ordinaria completa, cambi fluidi di precisione e revisioni meccaniche per utilitarie, furgoni da lavoro e supercar esclusive come Bentley.">Comprehensive routine maintenance, precise fluid changes, and mechanical overhauls for everyday passenger cars, work vans, and luxury exotics like Bentley.</p>
+            </div>
+            <div class="card">
+                <h3 data-lang-en="Engine Overhauls & Diagnostics" data-lang-it="Revisione Motori & Diagnostica">Engine Overhauls & Diagnostics</h3>
+                <p data-lang-en="Deep mechanical troubleshooting, complete engine rebuilds, cylinder head work, and fault resolution when other shops give up." data-lang-it="Risoluzione di problemi meccanici complessi, rifacimento completo di motori, lavorazione testate e risoluzione guasti complessi.">Deep mechanical troubleshooting, complete engine rebuilds, cylinder head work, and fault resolution when other shops give up.</p>
+            </div>
+            <div class="card">
+                <h3 data-lang-en="Motorcycles & Scooters" data-lang-it="Moto e Scooter">Motorcycles & Scooters</h3>
+                <p data-lang-en="Specialized mechanical servicing, transmission setups, and performance care for motorcycles and scooters of all displacements." data-lang-it="Assistenza meccanica specializzata, messa a punto della trasmissione e cura delle prestazioni per moto e scooter di ogni cilindrata.">Specialized mechanical servicing, transmission setups, and performance care for motorcycles and scooters of all displacements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2 data-lang-en="Workshop <span>Location & Contact</span>" data-lang-it="Officina <span>Contatti e Dove Siamo</span>">Workshop <span>Location & Contact</span></h2>
+            <p data-lang-en="Bring your vehicle directly to Conti Antonio in Bevera for an honest, expert assessment." data-lang-it="Porta il tuo veicolo direttamente da Conti Antonio a Bevera per una diagnosi onesta e professionale.">Bring your vehicle directly to Conti Antonio in Bevera for an honest, expert assessment.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 class="brand-font" style="font-size: 1.8rem; margin-bottom: 1rem;">Turbo Car di Conti Antonio</h3>
+                <p data-lang-en="The trusted workshop of choice for drivers throughout Lecco, Brianza, and surrounding Lombardy." data-lang-it="L'officina di fiducia per automobilisti in tutta la provincia di Lecco, la Brianza e dintorni.">The trusted workshop of choice for drivers throughout Lecco, Brianza, and surrounding Lombardy.</p>
+                <ul>
+                    <li>📍 <strong><span data-lang-en="Address:" data-lang-it="Indirizzo:">Address:</span></strong> Bevera, Province of Lecco (Brianza), Italy</li>
+                    <li>📞 <strong><span data-lang-en="Direct Line:" data-lang-it="Telefono diretto:">Direct Line:</span></strong> [Insert Antonio's Phone Number]</li>
+                    <li>🕒 <strong><span data-lang-en="Hours:" data-lang-it="Orari:">Hours:</span></strong> Monday — Friday: 8:00 – 19:00</li>
+                </ul>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully to Turbo Car di Conti Antonio!');">
+                <div class="form-group">
+                    <label data-lang-en="Your Name" data-lang-it="Il tuo Nome">Your Name</label>
+                    <input type="text" class="form-control" placeholder="Mario Rossi" required>
+                </div>
+                <div class="form-group">
+                    <label data-lang-en="Vehicle Make & Model" data-lang-it="Marca e Modello Veicolo">Vehicle Make & Model</label>
+                    <input type="text" class="form-control" placeholder="e.g. BMW M3, Porsche 911, Van, Scooter" required>
+                </div>
+                <div class="form-group">
+                    <label data-lang-en="Service / Issue Description" data-lang-it="Descrizione del Servizio / Problema">Service / Issue Description</label>
+                    <textarea class="form-control" rows="4" placeholder="Describe mechanical issue or tuning request..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" data-lang-en="Send Request to Antonio" data-lang-it="Invia Richiesta ad Antonio">Send Request to Antonio</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Turbo Car di Conti Antonio — Bevera (LC). All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'it' : 'en';
+            html.setAttribute('data-lang', newLang);
+            document.getElementById('langSwitchBtn').textContent = newLang === 'en' ? 'IT / EN' : 'EN / IT';
+        }
+    </script>
+</body>
+</html>
