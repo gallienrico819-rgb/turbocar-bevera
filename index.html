@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turbo Car di Conti Antonio | 50 Years of Master Mechanics in Bevera (Lecco)</title>
+    <title>Turbo Car di Conti Antonio | 50 Anni di Maestria Meccanica a Bevera (Lecco)</title>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -54,7 +54,7 @@
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--text-main);
             display: flex;
@@ -85,23 +85,6 @@
             color: var(--accent-cyan);
         }
 
-        .lang-toggle {
-            background: var(--border-color);
-            color: var(--text-main);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: var(--transition);
-        }
-
-        .lang-toggle:hover {
-            background: var(--accent-cyan);
-            color: var(--bg-base);
-        }
-
         .hero {
             padding: 12rem 5% 8rem 5%;
             background: radial-gradient(circle at 80% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
@@ -126,11 +109,14 @@
         }
 
         .hero h1 {
-            font-size.clamp: 2.5rem;
             font-size: 3.8rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             max-width: 900px;
+        }
+
+        @media(max-width: 900px) {
+            .hero h1 { font-size: 2.6rem; }
         }
 
         .hero h1 span {
@@ -257,7 +243,6 @@
 
         @media(max-width: 900px) {
             .legacy-box { grid-template-columns: 1fr; gap: 2rem; }
-            .hero h1 { font-size: 2.8rem; }
         }
 
         .legacy-content h3 {
@@ -360,17 +345,6 @@
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-
-        /* Localization toggling control */
-        [data-lang-en] { display: block; }
-        [data-lang-it] { display: none; }
-        html[data-lang="it"] [data-lang-en] { display: none; }
-        html[data-lang="it"] [data-lang-it] { display: block; }
-        
-        /* Inline span toggles */
-        span[data-lang-en], span[data-lang-it] { display: inline; }
-        html[data-lang="it"] span[data-lang-en] { display: none; }
-        html[data-lang="it"] span[data-lang-it] { display: inline; }
     </style>
 </head>
 <body>
@@ -378,121 +352,111 @@
     <header>
         <a href="#" class="logo">TURBO CAR <span>DI CONTI ANTONIO</span></a>
         <nav>
-            <a href="#legacy" data-lang-en="Legacy" data-lang-it="La Nostra Storia">Legacy</a>
-            <a href="#services" data-lang-en="Services" data-lang-it="Servizi">Services</a>
-            <a href="#contact" data-lang-en="Contact" data-lang-it="Contatti">Contact</a>
-            <button class="lang-toggle" id="langSwitchBtn" onclick="toggleLanguage()">IT / EN</button>
+            <a href="#storia">La Nostra Storia</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#contatti">Contatti</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="badge" data-lang-en="Bevera di Sirtori / Lecco — Province Master Mechanics" data-lang-it="Bevera (Lecco) — Maestria Meccanica Brianza">Bevera di Lecco — Province Master Mechanics</div>
-        <h1 data-lang-en="50 Years of Raw Engine Mastery in <span>Brianza</span>" data-lang-it="50 Anni di Maestria Meccanica Pura in <span>Brianza</span>">50 Years of Raw Engine Mastery in <span>Brianza</span></h1>
-        <p data-lang-en="From daily drivers and work vans to high-performance BMWs, Porsches, exotic Bentleys, and motorcycles. If it has an engine, Conti Antonio knows how to fix it, tune it, and unleash its full potential." data-lang-it="Dalle utilitarie ai furgoni da lavoro, dalle BMW e Porsche ad alte prestazioni alle esclusive Bentley e moto. Se ha un motore, Conti Antonio sa come ripararlo, metterlo a punto e spremerne tutta la potenza.">From daily drivers and work vans to high-performance BMWs, Porsches, exotic Bentleys, and motorcycles. If it has an engine, Conti Antonio knows how to fix it, tune it, and unleash its full potential.</p>
+        <div class="badge">Bevera di Lecco — Maestria Meccanica in Brianza</div>
+        <h1>50 Anni di Esperienza e Passione sui Motori in <span>Brianza</span></h1>
+        <p>Dalle utilitarie ai furgoni da lavoro, dalle BMW e Porsche ad alte prestazioni alle supercar esclusive come Bentley, fino a moto e scooter. Se ha un motore, Conti Antonio sa esattamente come rimetterlo a nuovo e tirare fuori il massimo delle prestazioni.</p>
         <div class="btn-group">
-            <a href="#contact" class="btn btn-primary" data-lang-en="Book Consultation" data-lang-it="Prenota Consulto">Book Consultation</a>
-            <a href="#services" class="btn btn-secondary" data-lang-en="Explore Expertise" data-lang-it="Scopri i Servizi">Explore Expertise</a>
+            <a href="#contatti" class="btn btn-primary">Richiedi Informazioni</a>
+            <a href="#servizi" class="btn btn-secondary">Scopri i Servizi</a>
         </div>
     </section>
 
-    <section id="legacy">
+    <section id="storia">
         <div class="legacy-box">
             <div class="legacy-content">
-                <h3 data-lang-en="The Legend of Bevera" data-lang-it="La Leggenda di Bevera">The Legend of Bevera</h3>
-                <p data-lang-en="For half a century, Turbo Car di Conti Antonio has been the definitive point of reference in the Lecco and Brianza territory. While modern garages rely on swapping complete assemblies, Antonio relies on five decades of hands-on mechanical genius, intuition, and precision diagnosis." data-lang-it="Da mezzo secolo, Turbo Car di Conti Antonio è il punto di riferimento definitivo nel territorio di Lecco e della Brianza. Mentre le officine moderne sostituiscono interi blocchi, Antonio si affida a cinquant'anni di ingegno meccanico manuale, intuito e diagnosi millimetriche.">For half a century, Turbo Car di Conti Antonio has been the definitive point of reference in the Lecco and Brianza territory. While modern garages rely on swapping complete assemblies, Antonio relies on five decades of hands-on mechanical genius, intuition, and precision diagnosis.</p>
-                <p data-lang-en="Whether a local courier van needs reliable turnaround, a customer brings in a precision German sports car, or a motorcycle requires expert tuning, Antonio handles every single task directly from start to finish." data-lang-it="Che un furgone da lavoro locale abbia bisogno di manutenzione urgente, che un cliente porti una sportiva tedesca di precisione o che una moto richieda una messa a punto esperta, Antonio gestisce ogni singolo intervento direttamente dall'inizio alla fine.">Whether a local courier van needs reliable turnaround, a customer brings in a precision German sports car, or a motorcycle requires expert tuning, Antonio handles every single task directly from start to finish.</p>
+                <h3>La Tradizione di Bevera</h3>
+                <p>Da cinquant'anni, Turbo Car di Conti Antonio rappresenta il punto di riferimento sicuro e affidabile per automobilisti e professionisti nella provincia di Lecco e in tutta la Brianza. Quando le officine tradizionali alzano bandiera bianca o si limitano a sostituire pezzi a caso, Antonio interviene con l'esperienza diretta, l'intuito e la precisione del vero meccanico di una volta.</p>
+                <p>Che si tratti di un controllo accurato su un furgone da lavoro, di una messa a punto complessa su un'auto sportiva o della cura di vetture di prestigio, ogni intervento viene eseguito personalmente da Antonio con la massima serietà.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <h4>50+</h4>
-                    <span data-lang-en="Years Experience" data-lang-it="Anni di Esperienza">Years Experience</span>
+                    <span>Anni di Attività</span>
                 </div>
                 <div class="stat-item">
                     <h4>100%</h4>
-                    <span data-lang-en="Direct Hands-On Work" data-lang-it="Lavoro Diretto">Direct Hands-On Work</span>
+                    <span>Lavoro Artigianale</span>
                 </div>
                 <div class="stat-item">
-                    <h4>All</h4>
-                    <span data-lang-en="Vehicle Platforms" data-lang-it="Tipi di Veicoli">Vehicle Platforms</span>
+                    <h4>Tutti</h4>
+                    <span>I Tipi di Veicoli</span>
                 </div>
                 <div class="stat-item">
                     <h4>Lecco</h4>
-                    <span data-lang-en="Brianza Region" data-lang-it="Territorio Brianza">Brianza Region</span>
+                    <span>Cuore della Brianza</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services">
+    <section id="servizi">
         <div class="section-header">
-            <h2 data-lang-en="Complete Mechanical <span>Scope</span>" data-lang-it="Gamma Completa di <span>Interventi</span>">Complete Mechanical <span>Scope</span></h2>
-            <p data-lang-en="Unmatched versatility across all engine types, weights, and performance tiers." data-lang-it="Versatilità ineguagliabile su ogni tipo di motore, cilindrata e livello di prestazione.">Unmatched versatility across all engine types, weights, and performance tiers.</p>
+            <h2>Competenze e <span>Servizi</span></h2>
+            <p>Versatilità totale su ogni cilindrata, categoria di veicolo e livello di elaborazione.</p>
         </div>
         <div class="grid-4">
             <div class="card">
-                <h3 data-lang-en="Performance & ECU Mapping" data-lang-it="Mappatura Centraline & ECU">Performance & ECU Mapping</h3>
-                <p data-lang-en="Precision custom remapping for BMW, Porsche, Audi, and Mercedes-AMG platforms. Optimized fueling, ignition timing, and boost curves." data-lang-it="Rimappatura personalizzata di precisione per piattaforme BMW, Porsche, Audi e Mercedes-AMG. Ottimizzazione di iniezione, anticipi e pressione di sovralimentazione.">Precision custom remapping for BMW, Porsche, Audi, and Mercedes-AMG platforms. Optimized fueling, ignition timing, and boost curves.</p>
+                <h3>Preparazioni & Rimappatura ECU</h3>
+                <p>Elaborazioni elettroniche mirate e rimappatura centraline per BMW, Porsche, Audi e Mercedes-AMG. Ottimizzazione della curva di coppia, risposta dell'acceleratore e gestione dell'iniezione.</p>
             </div>
             <div class="card">
-                <h3 data-lang-en="Cars, Vans & Exotics Care" data-lang-it="Auto, Furgoni e Marche Esclusive">Cars, Vans & Exotics Care</h3>
-                <p data-lang-en="Comprehensive routine maintenance, precise fluid changes, and mechanical overhauls for everyday passenger cars, work vans, and luxury exotics like Bentley." data-lang-it="Manutenzione ordinaria completa, cambi fluidi di precisione e revisioni meccaniche per utilitarie, furgoni da lavoro e supercar esclusive come Bentley.">Comprehensive routine maintenance, precise fluid changes, and mechanical overhauls for everyday passenger cars, work vans, and luxury exotics like Bentley.</p>
+                <h3>Auto, Furgoni & Supercar</h3>
+                <p>Manutenzione meccanica completa, tagliandi accurati, revisioni e risoluzione guasti su utilitarie, veicoli commerciali, furgoni da lavoro e vetture di prestigio come Bentley.</p>
             </div>
             <div class="card">
-                <h3 data-lang-en="Engine Overhauls & Diagnostics" data-lang-it="Revisione Motori & Diagnostica">Engine Overhauls & Diagnostics</h3>
-                <p data-lang-en="Deep mechanical troubleshooting, complete engine rebuilds, cylinder head work, and fault resolution when other shops give up." data-lang-it="Risoluzione di problemi meccanici complessi, rifacimento completo di motori, lavorazione testate e risoluzione guasti complessi.">Deep mechanical troubleshooting, complete engine rebuilds, cylinder head work, and fault resolution when other shops give up.</p>
+                <h3>Revisioni Motori & Diagnostica</h3>
+                <p>Rifacimento completo motori, rettifiche, controllo testate e diagnostica elettronica avanzata per individuare e risolvere anomalie che altri non riescono a trovare.</p>
             </div>
             <div class="card">
-                <h3 data-lang-en="Motorcycles & Scooters" data-lang-it="Moto e Scooter">Motorcycles & Scooters</h3>
-                <p data-lang-en="Specialized mechanical servicing, transmission setups, and performance care for motorcycles and scooters of all displacements." data-lang-it="Assistenza meccanica specializzata, messa a punto della trasmissione e cura delle prestazioni per moto e scooter di ogni cilindrata.">Specialized mechanical servicing, transmission setups, and performance care for motorcycles and scooters of all displacements.</p>
+                <h3>Moto & Scooter</h3>
+                <p>Assistenza meccanica specializzata, tagliandi, manutenzione trasmissioni e ottimizzazione ciclistica e motoristica per moto e scooter di qualsiasi cilindrata.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contatti">
         <div class="section-header">
-            <h2 data-lang-en="Workshop <span>Location & Contact</span>" data-lang-it="Officina <span>Contatti e Dove Siamo</span>">Workshop <span>Location & Contact</span></h2>
-            <p data-lang-en="Bring your vehicle directly to Conti Antonio in Bevera for an honest, expert assessment." data-lang-it="Porta il tuo veicolo direttamente da Conti Antonio a Bevera per una diagnosi onesta e professionale.">Bring your vehicle directly to Conti Antonio in Bevera for an honest, expert assessment.</p>
+            <h2>Officina & <span>Contatti</span></h2>
+            <p>Vieni a trovarci direttamente in officina a Bevera per una diagnosi onesta e professionale.</p>
         </div>
         <div class="contact-container">
             <div class="contact-info">
                 <h3 class="brand-font" style="font-size: 1.8rem; margin-bottom: 1rem;">Turbo Car di Conti Antonio</h3>
-                <p data-lang-en="The trusted workshop of choice for drivers throughout Lecco, Brianza, and surrounding Lombardy." data-lang-it="L'officina di fiducia per automobilisti in tutta la provincia di Lecco, la Brianza e dintorni.">The trusted workshop of choice for drivers throughout Lecco, Brianza, and surrounding Lombardy.</p>
+                <p>L'officina di fiducia nel territorio di Lecco e della Brianza per chi cerca competenza vera senza compromessi.</p>
                 <ul>
-                    <li>📍 <strong><span data-lang-en="Address:" data-lang-it="Indirizzo:">Address:</span></strong> Bevera, Province of Lecco (Brianza), Italy</li>
-                    <li>📞 <strong><span data-lang-en="Direct Line:" data-lang-it="Telefono diretto:">Direct Line:</span></strong> [Insert Antonio's Phone Number]</li>
-                    <li>🕒 <strong><span data-lang-en="Hours:" data-lang-it="Orari:">Hours:</span></strong> Monday — Friday: 8:00 – 19:00</li>
+                    <li>📍 <strong>Indirizzo:</strong> Bevera, Provincia di Lecco (Brianza), Italia</li>
+                    <li>📞 <strong>Telefono Diretto:</strong> [Inserire Telefono di Antonio]</li>
+                    <li>🕒 <strong>Orari:</strong> Lunedì — Venerdì: 8:00 – 19:00</li>
                 </ul>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully to Turbo Car di Conti Antonio!');">
+            <form onsubmit="event.preventDefault(); alert('Messaggio inviato con successo a Turbo Car di Conti Antonio!');">
                 <div class="form-group">
-                    <label data-lang-en="Your Name" data-lang-it="Il tuo Nome">Your Name</label>
+                    <label>Il tuo Nome</label>
                     <input type="text" class="form-control" placeholder="Mario Rossi" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-en="Vehicle Make & Model" data-lang-it="Marca e Modello Veicolo">Vehicle Make & Model</label>
-                    <input type="text" class="form-control" placeholder="e.g. BMW M3, Porsche 911, Van, Scooter" required>
+                    <label>Marca e Modello del Veicolo</label>
+                    <input type="text" class="form-control" placeholder="es. BMW M3, Porsche, Furgone, Scooter" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-en="Service / Issue Description" data-lang-it="Descrizione del Servizio / Problema">Service / Issue Description</label>
-                    <textarea class="form-control" rows="4" placeholder="Describe mechanical issue or tuning request..." required></textarea>
+                    <label>Descrizione della Richiesta o del Problema</label>
+                    <textarea class="form-control" rows="4" placeholder="Scrivi qui di cosa hai bisogno..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" data-lang-en="Send Request to Antonio" data-lang-it="Invia Richiesta ad Antonio">Send Request to Antonio</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Invia Richiesta ad Antonio</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Turbo Car di Conti Antonio — Bevera (LC). All rights reserved.</p>
+        <p>&copy; 2026 Turbo Car di Conti Antonio — Bevera (LC). Tutti i diritti riservati.</p>
     </footer>
 
-    <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('data-lang');
-            const newLang = currentLang === 'en' ? 'it' : 'en';
-            html.setAttribute('data-lang', newLang);
-            document.getElementById('langSwitchBtn').textContent = newLang === 'en' ? 'IT / EN' : 'EN / IT';
-        }
-    </script>
 </body>
 </html>
